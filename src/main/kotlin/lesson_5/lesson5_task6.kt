@@ -5,16 +5,15 @@ fun main() {
     val indexLimit2 = 25
     val indexLimit3 = 30
 
-    println("Для расчета индекса массы тела введите данные своего веса в кг и роста в см: ")
+    println("Для расчета индекса массы тела введите данные своего веса в кг и роста в см")
     println("Ваш вес: ")
-    val weight = readlnOrNull()?.toDouble()
+    val weight: Double = readln().toDouble()
     print("Ваш рост: ")
-    val height = readlnOrNull()?.toDouble()
+    val height: Double = readln().toDouble()
     val cmMetre = 100
 
-    val heightMetre = height!! / cmMetre
-    val indexBody = weight!! / (heightMetre * 2)
-    println(indexBody)
+    val heightMetre = height / cmMetre
+    val indexBody = weight / (heightMetre * 2)
 
     if (indexBody < indexLimit1) {
         println("Недостаточная масса тела")
@@ -27,5 +26,6 @@ fun main() {
     else {
     println("Вы не ввели данные")
     }
-    println("Ваш индекс массы тела составляет " + "$indexBody")
+    println("Ваш индекс массы тела составляет " + String.format("%.2f", indexBody))
+
 }
