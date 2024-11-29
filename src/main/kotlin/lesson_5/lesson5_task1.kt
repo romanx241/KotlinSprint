@@ -3,12 +3,13 @@ package org.example.lesson_5
 fun main() {
 
     print("Введите первое число: ")
-    val num1 = readLine()
+    val num1 = readln()
+
     print("Введите второе число: ")
-    val num2 = readLine()
+    val num2 = readln()
     println("Сумма двух чисел: ")
     var sum = num1 + num2
-    sum = readLine().toString()
+    sum = readln()
 
     println(": $num1")
     println(": $num2")
