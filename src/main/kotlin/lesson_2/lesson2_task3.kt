@@ -4,14 +4,12 @@ fun main() {
     val checkOutTimeHour = 9
     val checkOutTimeMinute = 39
     val timeTravel = 457
-    val timeTravelHour = timeTravel / 60
-    val timeTravelMinute = timeTravel % 60
-    val timeArrivalHour = checkOutTimeHour + timeTravelHour
-    val timeArrivalMinute = (checkOutTimeMinute + timeTravelMinute)
-    val timeArrivalH = timeArrivalMinute / 60
-    val timeArrivalM = timeArrivalMinute % 60
-    val trainArrivalH = timeArrivalHour+ timeArrivalH
-    val trainArrivalM = timeTravelMinute + timeArrivalM
+    val minuteInHour = 60
+    val checkOutTimeHorInMinute = checkOutTimeHour * minuteInHour
+    val checkOutTimeAllMinute = checkOutTimeHorInMinute + checkOutTimeMinute
+    val trainArrivalAllMinute = checkOutTimeAllMinute + timeTravel
+    val trainArrivalHour = trainArrivalAllMinute / minuteInHour
+    val trainArrivalMinute = trainArrivalAllMinute % minuteInHour
 
-    println("Поезд прибудет в " + "$trainArrivalH" + " часов " + "$trainArrivalM " + "минуты")
+    println("Поезд прибудет в " + "$trainArrivalHour" + " часов " + "$trainArrivalMinute " + "минуты")
 }
