@@ -6,9 +6,9 @@ fun main() {
 
     println("Для получения выигрыша вам следует ввести в консоль два числа из диапазона от 0 до 42")
     println("Введите первое число: ")
-    val oneNumber = readLine()?.toInt()
+    val oneNumber: Int = readln().toInt()
     print("Введите второе число: ")
-    val twoNumber = readLine()?.toInt()
+    val twoNumber: Int = readln().toInt()
 
     if ((oneNumber == oneLuckyNumber) && (twoNumber == twoLuckyNumber)) {
     println("Поздравляем! Вы выиграли главный приз!")
@@ -17,6 +17,6 @@ fun main() {
         } else {
             ((oneNumber != oneLuckyNumber) || (twoNumber != twoLuckyNumber))
             println("Неудача! Попробуйте еще раз!")
-            println("Счастливыми номерами в этот раз были " + "$oneLuckyNumber" + " и " + "$twoLuckyNumber")
+            println("Счастливыми номерами в этот раз были $oneLuckyNumber и $twoLuckyNumber")
         }
     }
