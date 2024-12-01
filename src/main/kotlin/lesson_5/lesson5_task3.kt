@@ -12,10 +12,10 @@ fun main() {
 
     if ((oneNumber == oneLuckyNumber) && (twoNumber == twoLuckyNumber)) {
     println("Поздравляем! Вы выиграли главный приз!")
-    } else if ((oneNumber == oneLuckyNumber) || (twoNumber == twoLuckyNumber)) {
+    } else if ((oneNumber == oneLuckyNumber) || (twoNumber == twoLuckyNumber)
+        || (oneNumber == twoLuckyNumber) || (twoNumber == oneLuckyNumber)) {
             println("Вы выиграли утешительный приз!")
         } else {
-            ((oneNumber != oneLuckyNumber) || (twoNumber != twoLuckyNumber))
             println("Неудача! Попробуйте еще раз!")
             println("Счастливыми номерами в этот раз были $oneLuckyNumber и $twoLuckyNumber")
         }
